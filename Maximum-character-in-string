@@ -1,0 +1,40 @@
+package com.company;
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.print("Enter the String: ");
+        String string=in.nextLine();
+        int Maxcounter=0;
+        int Counter=0;
+        char temp='a';
+        for(int i=0;i<string.length();i++)
+        {
+            for(int j=i+1;j<string.length();j++)
+            {
+                if (string.charAt(i)==string.charAt(j))
+                {
+                    Counter++;
+                }
+            }
+            if(Counter>Maxcounter)
+            {
+                Maxcounter=Counter;
+                temp=string.charAt(i);
+            }
+        }
+        System.out.print("Maximum repeating character in string: "+temp);
+
+    }
+}
+
+
+
+
+
+
+
